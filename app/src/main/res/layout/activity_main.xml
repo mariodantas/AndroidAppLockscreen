@@ -12,27 +12,31 @@
         android:layout_height="wrap_content"
         android:onClick="setPass"
         android:layout_marginBottom="16dp"
-        android:text="Set" />
+        android:text="Set"
+        tools:ignore="HardcodedText,UsingOnClickInXml" />
 
     <Button
         android:layout_width="match_parent"
         android:onClick="changePass"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="Change" />
+        android:text="Change"
+        tools:ignore="HardcodedText,UsingOnClickInXml" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="disable"
         android:layout_marginBottom="16dp"
-        android:text="Disable" />
+        android:text="Disable"
+        tools:ignore="HardcodedText,UsingOnClickInXml" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="checkPass"
         android:layout_marginBottom="16dp"
-        android:text="Check" />
+        android:text="Check"
+        tools:ignore="HardcodedText,UsingOnClickInXml" />
 
 </LinearLayout>

@@ -1,4 +1,4 @@
-package p32929.easypasscodelock.Utils;
+package p32929.easypasscodelock.utils;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -11,14 +11,12 @@ import android.content.SharedPreferences;
 public class EasylockSP {
     public static SharedPreferences sharedPreferences;
 
-    //
     public static void init(Context context) {
         if (sharedPreferences == null) {
             sharedPreferences = context.getSharedPreferences("Lockscreen", Context.MODE_PRIVATE);
         }
     }
 
-    //
     @SuppressLint("ApplySharedPref")
     public static void put(String title, boolean value) {
         sharedPreferences.edit().putBoolean(title, value).commit();
@@ -66,6 +64,7 @@ public class EasylockSP {
     }
 
     //
+    @SuppressLint("ApplySharedPref")
     public static void clearAll() {
         sharedPreferences.edit().clear().commit();
     }

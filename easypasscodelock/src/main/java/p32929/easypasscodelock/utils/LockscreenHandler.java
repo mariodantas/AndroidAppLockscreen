@@ -1,4 +1,4 @@
-package p32929.easypasscodelock.Utils;
+package p32929.easypasscodelock.utils;
 
 import android.app.ActivityManager;
 import android.content.ComponentCallbacks2;
@@ -40,11 +40,10 @@ public class LockscreenHandler extends AppCompatActivity implements ComponentCal
     protected void onResume() {
         super.onResume();
 
-        if (WentToBackground && EasylockSP.getString("password", null) != null) {
+        if (WentToBackground && EasylockSP.getString("password_to_unlock_app", null) != null) {
             // We're in the foreground & password != null
             WentToBackground = false;
             Log.d(TAG, "WentToBackground: " + WentToBackground);
-
             EasyLock.checkPassword(this);
         }
     }

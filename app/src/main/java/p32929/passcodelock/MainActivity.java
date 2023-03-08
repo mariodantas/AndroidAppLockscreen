@@ -4,8 +4,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import p32929.easypasscodelock.Utils.EasyLock;
-import p32929.easypasscodelock.Utils.LockscreenHandler;
+import p32929.easypasscodelock.utils.EasyLock;
+import p32929.easypasscodelock.utils.LockscreenHandler;
 
 public class MainActivity extends LockscreenHandler {
 
@@ -27,15 +27,15 @@ public class MainActivity extends LockscreenHandler {
 
 
     public void setPass(View view) {
-        EasyLock.setPassword(this, TestActivity.class);
+        EasyLock.setPassword(this, TestActivity.class, true);
     }
 
     public void changePass(View view) {
-        EasyLock.changePassword(this, TestActivity.class);
+        EasyLock.changePassword(this, TestActivity.class, true);
     }
 
     public void disable(View view) {
-        EasyLock.disablePassword(this, TestActivity.class);
+        EasyLock.disablePassword(this, TestActivity.class, true);
     }
 
     public void checkPass(View view) {

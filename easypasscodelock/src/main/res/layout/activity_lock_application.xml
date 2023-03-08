@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:background="#000000"
     android:orientation="vertical"
-    tools:context="p32929.easypasscodelock.Activities.LockscreenActivity">
+
+    tools:context="p32929.easypasscodelock.activities.LockApplicationActivity">
 
     <ImageView
         android:id="@+id/logo"
