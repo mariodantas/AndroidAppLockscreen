@@ -7,7 +7,7 @@
     android:background="#000000"
     android:orientation="vertical"
 
-    tools:context="p32929.easypasscodelock.activities.LockApplicationActivity">
+    tools:context="p32929.passcodelock.LockApplicationActivity">
 
     <ImageView
         android:id="@+id/logo"
@@ -59,7 +59,8 @@
                 android:minHeight="48dp"
                 android:textAlignment="textEnd"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
                 android:id="@+id/lbtnDelete"
@@ -103,7 +104,8 @@
                 android:text="1"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                tools:ignore="VisualLintButtonSize" />
 
             <Button
                 android:id="@+id/lbtn2"
@@ -114,7 +116,8 @@
                 android:text="2"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                tools:ignore="VisualLintButtonSize" />
 
             <Button
                 android:id="@+id/lbtn3"
@@ -125,7 +128,8 @@
                 android:text="3"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                tools:ignore="VisualLintButtonSize" />
 
 
         </LinearLayout>
@@ -146,7 +150,8 @@
                 android:text="4"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                tools:ignore="VisualLintButtonSize" />
 
             <Button
                 android:id="@+id/lbtn5"
@@ -157,7 +162,8 @@
                 android:text="5"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                tools:ignore="VisualLintButtonSize" />
 
             <Button
                 android:id="@+id/lbtn6"
@@ -168,7 +174,8 @@
                 android:text="6"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                tools:ignore="VisualLintButtonSize" />
 
 
         </LinearLayout>
@@ -189,7 +196,8 @@
                 android:text="7"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                tools:ignore="VisualLintButtonSize" />
 
             <Button
                 android:id="@+id/lbtn8"
@@ -200,7 +208,8 @@
                 android:text="8"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                tools:ignore="VisualLintButtonSize" />
 
             <Button
                 android:id="@+id/lbtn9"
@@ -211,7 +220,8 @@
                 android:text="9"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                tools:ignore="VisualLintButtonSize" />
 
 
         </LinearLayout>
@@ -231,7 +241,8 @@
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp"
-                android:visibility="invisible" />
+                android:visibility="invisible"
+                tools:ignore="VisualLintButtonSize" />
 
             <Button
                 android:id="@+id/lbtn0"
@@ -242,7 +253,8 @@
                 android:text="0"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                tools:ignore="VisualLintButtonSize" />
 
             <Button
                 android:id="@+id/lbtnEnter"
@@ -253,7 +265,8 @@
                 android:text="✓"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                tools:ignore="VisualLintButtonSize" />
 
 
         </LinearLayout>

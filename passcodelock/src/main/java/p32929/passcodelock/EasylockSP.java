@@ -1,4 +1,4 @@
-package p32929.easypasscodelock.utils;
+package p32929.passcodelock;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -65,7 +65,7 @@ public class EasylockSP {
 
     //
     @SuppressLint("ApplySharedPref")
-    public static void clearAll() {
+    public static void clear() {
         sharedPreferences.edit().clear().commit();
     }
 

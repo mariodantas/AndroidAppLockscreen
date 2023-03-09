@@ -1,14 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    namespace 'p32929.easypasscodelock'
+    namespace 'p32929.passcodelock'
     compileSdkVersion 33
 
     defaultConfig {
-        minSdkVersion 19
+        minSdkVersion 23
         targetSdkVersion 33
-        versionCode 1
-        versionName "1.0"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
 
     }

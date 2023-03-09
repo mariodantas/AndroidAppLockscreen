@@ -2,8 +2,6 @@ package p32929.passcodelock;
 
 import android.os.Bundle;
 
-import p32929.easypasscodelock.utils.LockscreenHandler;
-
 public class TestActivity extends LockscreenHandler {
 
     @Override

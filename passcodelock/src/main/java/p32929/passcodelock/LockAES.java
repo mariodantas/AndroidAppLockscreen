@@ -1,4 +1,4 @@
-package p32929.easypasscodelock.helpers;
+package p32929.passcodelock;
 
 import android.util.Base64;
 import android.util.Log;

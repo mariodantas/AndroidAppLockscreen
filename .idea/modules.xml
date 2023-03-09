@@ -7,10 +7,10 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AndroidAppLockscreen.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AndroidAppLockscreen.app.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AndroidAppLockscreen.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AndroidAppLockscreen.app.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AndroidAppLockscreen.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AndroidAppLockscreen.app.unitTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/easypasscodelock/AndroidAppLockscreen.easypasscodelock.iml" filepath="$PROJECT_DIR$/.idea/modules/easypasscodelock/AndroidAppLockscreen.easypasscodelock.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/easypasscodelock/AndroidAppLockscreen.easypasscodelock.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/easypasscodelock/AndroidAppLockscreen.easypasscodelock.androidTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/easypasscodelock/AndroidAppLockscreen.easypasscodelock.main.iml" filepath="$PROJECT_DIR$/.idea/modules/easypasscodelock/AndroidAppLockscreen.easypasscodelock.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/easypasscodelock/AndroidAppLockscreen.easypasscodelock.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/easypasscodelock/AndroidAppLockscreen.easypasscodelock.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/easypasscodelock/AndroidAppLockscreen.passcodelock.iml" filepath="$PROJECT_DIR$/.idea/modules/easypasscodelock/AndroidAppLockscreen.passcodelock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/passcodelock/AndroidAppLockscreen.passcodelock.main.iml" filepath="$PROJECT_DIR$/.idea/modules/passcodelock/AndroidAppLockscreen.passcodelock.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/passcodelock/AndroidAppLockscreen.passcodelock.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/passcodelock/AndroidAppLockscreen.passcodelock.unitTest.iml" />
     </modules>
   </component>
 </project>

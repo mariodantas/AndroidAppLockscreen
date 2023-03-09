@@ -1,1 +1,1 @@
-include ':app', ':easypasscodelock'
+include ':app', ':passcodelock'

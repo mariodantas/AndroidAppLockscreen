@@ -4,9 +4,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import p32929.easypasscodelock.utils.EasyLock;
-import p32929.easypasscodelock.utils.LockscreenHandler;
-
 public class MainActivity extends LockscreenHandler {
 
     @Override

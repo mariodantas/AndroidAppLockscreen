@@ -22,11 +22,12 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    namespace 'p32929.passcodelock'
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation project(path: ':easypasscodelock')
+    implementation project(path: ':passcodelock')
     androidTestImplementation 'junit:junit:4.13.2'
 }
