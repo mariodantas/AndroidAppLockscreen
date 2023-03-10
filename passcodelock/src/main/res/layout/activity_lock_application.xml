@@ -4,9 +4,10 @@
     android:id="@+id/background_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+    android:layout_gravity="end"
     android:background="#000000"
     android:orientation="vertical"
-
     tools:context="p32929.passcodelock.LockApplicationActivity">
 
     <ImageView
@@ -35,8 +36,6 @@
             android:id="@+id/span_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/input_password_layout"
-            android:layout_centerHorizontal="true"
             android:layout_margin="16dp"
             android:text="@string/enter_your_password_txt"
             android:textColor="#FFFFFF"
@@ -74,9 +73,11 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id='@+id/password_underline'
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:background="#FFFFFF" />
+            android:background="#FFFFFF"
+            android:orientation="horizontal" />
 
     </LinearLayout>
 

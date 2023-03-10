@@ -2,11 +2,11 @@ package p32929.passcodelock;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -69,7 +69,7 @@ public class LockApplicationActivity extends LockscreenHandler implements Activi
         String disableStatus = "disable";
         if (ReceivedAction.equals(disableStatus)) {
             EasylockSP.put(EasyLock.PASSWORD_TO_UNLOCK_APP, null);
-            ShowToast(this, getString(R.string.password_disabled_txt), Toast.LENGTH_SHORT);
+            ShowToast(this, getString(R.string.password_disabled_txt));
             gotoActivity();
         }
     }
@@ -82,6 +82,12 @@ public class LockApplicationActivity extends LockscreenHandler implements Activi
         PasswordAsDots = findViewById(R.id.dotText);
         PasswordAsDots.setTextColor(EasyLock.foregroundColor);
 
+        ImageView imgLogo = findViewById(R.id.logo);
+        imgLogo.setColorFilter(EasyLock.foregroundColor);
+
+        View passwordUnderline = findViewById(R.id.password_underline);
+        passwordUnderline.setBackgroundColor(EasyLock.foregroundColor);
+
         TextView textViewForgotPassword = findViewById(R.id.forgot_pass_textview);
         textViewForgotPassword.setTextColor(EasyLock.foregroundColor);
 
@@ -89,7 +95,9 @@ public class LockApplicationActivity extends LockscreenHandler implements Activi
         buttonEnter.setTextColor(EasyLock.foregroundColor);
 
         ImageButton imageButtonDelete = findViewById(R.id.lbtnDelete);
-        imageButtonDelete.setBackgroundColor(EasyLock.foregroundColor);
+        imageButtonDelete.setBackgroundColor(EasyLock.backgroundColor);
+        imageButtonDelete.setColorFilter(EasyLock.foregroundColor);
+
 
         RelativeLayout relativeLayoutBackground = findViewById(R.id.background_layout);
         relativeLayoutBackground.setBackgroundColor(EasyLock.backgroundColor);
@@ -115,7 +123,7 @@ public class LockApplicationActivity extends LockscreenHandler implements Activi
                     } else {
                         EnteredPassword = "";
                         PasswordAsDots.setText(EnteredPassword);
-                        ShowToast(this, getString(R.string.incorrect_password_txt), Toast.LENGTH_SHORT);
+                        ShowToast(this, getString(R.string.incorrect_password_txt));
                     }
                     break;
 
@@ -133,7 +141,7 @@ public class LockApplicationActivity extends LockscreenHandler implements Activi
                 case SetPasswordConfirm:
                     if (EnteredPassword.equals(TransitoryPassword)) {
                         EasylockSP.put(EasyLock.PASSWORD_TO_UNLOCK_APP, LockAES.Encrypt(EnteredPassword));
-                        ShowToast(LockApplicationActivity.this, getString(R.string.password_is_set_txt), Toast.LENGTH_SHORT);
+                        ShowToast(LockApplicationActivity.this, getString(R.string.password_is_set_txt));
                         gotoActivity();
                     } else {
                         EnteredPassword = "";
@@ -141,7 +149,7 @@ public class LockApplicationActivity extends LockscreenHandler implements Activi
                         ReceivedAction = SetPassword;
                         PasswordAsDots.setText(EnteredPassword);
                         ActionMessage.setText(R.string.enter_a_new_password_txt);
-                        ShowToast(LockApplicationActivity.this, getString(R.string.please_enter_a_new_password_again_txt), Toast.LENGTH_SHORT);
+                        ShowToast(LockApplicationActivity.this, getString(R.string.please_enter_a_new_password_again_txt));
                     }
                     break;
 
@@ -156,7 +164,7 @@ public class LockApplicationActivity extends LockscreenHandler implements Activi
                     } else {
                         EnteredPassword = "";
                         PasswordAsDots.setText(EnteredPassword);
-                        ShowToast(LockApplicationActivity.this, getString(R.string.please_enter_current_password_txt), Toast.LENGTH_SHORT);
+                        ShowToast(LockApplicationActivity.this, getString(R.string.please_enter_current_password_txt));
                     }
                     break;
 
@@ -173,7 +181,7 @@ public class LockApplicationActivity extends LockscreenHandler implements Activi
                 case ChangePassword_EnterNewPasswordConfirm:
                     if (EnteredPassword.equals(TransitoryPassword)) {
                         EasylockSP.put(EasyLock.PASSWORD_TO_UNLOCK_APP, LockAES.Encrypt(EnteredPassword));
-                        ShowToast(LockApplicationActivity.this, getString(R.string.password_changed_txt), Toast.LENGTH_SHORT);
+                        ShowToast(LockApplicationActivity.this, getString(R.string.password_changed_txt));
                         gotoActivity();
                     } else {
                         EnteredPassword = "";
@@ -182,7 +190,7 @@ public class LockApplicationActivity extends LockscreenHandler implements Activi
 
                         PasswordAsDots.setText(EnteredPassword);
                         ActionMessage.setText(R.string.enter_a_new_password_txt);
-                        ShowToast(LockApplicationActivity.this, getString(R.string.please_enter_a_new_password_again_txt), Toast.LENGTH_SHORT);
+                        ShowToast(LockApplicationActivity.this, getString(R.string.please_enter_a_new_password_again_txt));
                     }
                     break;
             }
@@ -191,13 +199,15 @@ public class LockApplicationActivity extends LockscreenHandler implements Activi
 
         for (int passButtonId : passButtonIds) {
             final Button NumberButton = findViewById(passButtonId);
+            NumberButton.setTextColor(EasyLock.foregroundColor);
             NumberButton.setOnClickListener(view -> {
                 if (EnteredPassword.length() >= 8) {
-                    ShowToast(LockApplicationActivity.this, getString(R.string.max_8_characters_txt), Toast.LENGTH_SHORT);
+                    ShowToast(LockApplicationActivity.this, getString(R.string.max_8_characters_txt));
                 } else {
                     EnteredPassword += NumberButton.getText().toString();
                 }
                 PasswordAsDots.setText(EnteredPassword);
+                PasswordAsDots.refreshDrawableState();
             });
         }
     }
@@ -207,7 +217,7 @@ public class LockApplicationActivity extends LockscreenHandler implements Activi
         if (p != null) {
             return LockAES.Decrypt(p);
         }
-        return p;
+        return null;
     }
 
     private void gotoActivity() {
@@ -232,11 +242,9 @@ public class LockApplicationActivity extends LockscreenHandler implements Activi
         }
     }
 
-    private static void ShowToast(Context context, String message, int duration) {
-        Toast toast = Toast.makeText(context, message, duration);
-        View view = toast.getView();
-        view.getBackground().setColorFilter(EasyLock.backgroundColor, PorterDuff.Mode.SRC_IN);
-        view.getForeground().setColorFilter(EasyLock.foregroundColor, PorterDuff.Mode.SRC_IN);
+    private static void ShowToast(Context context, String message) {
+        Toast toast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
+        //View view = toast.getView();
         toast.show();
 
     }

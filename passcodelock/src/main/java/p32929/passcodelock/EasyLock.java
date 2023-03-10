@@ -28,7 +28,8 @@ public class EasyLock {
         }
     }
 
-    public static boolean IsPasswordProtected() {
+    public static boolean IsPasswordProtected(Context context) {
+        EasylockSP.init(context);
         return EasylockSP.getString(EasyLock.PASSWORD_TO_UNLOCK_APP, null) != null &&
                 !Objects.equals(EasylockSP.getString("password_to_unlock_app", null), "");
     }
