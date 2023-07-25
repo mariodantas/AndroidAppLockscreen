@@ -11,5 +11,5 @@
     <string name="password_disabled_txt">Hasło wyłączone</string>
     <string name="enter_your_password_txt">Wprowadź hasło</string>
     <string name="clear_txt">Usuwać</string>
-    <string name="forgot_password_txt">Zapomniałeś hasła \?</string>
+    <string name="forgot_password_txt">Zapomniałeś hasła ?</string>
 </resources>

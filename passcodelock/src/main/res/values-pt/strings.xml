@@ -11,5 +11,5 @@
     <string name="password_disabled_txt">Senha desativada</string>
     <string name="enter_your_password_txt">Coloque sua senha</string>
     <string name="clear_txt">Excluir</string>
-    <string name="forgot_password_txt">Esqueceu sua senha \?</string>
+    <string name="forgot_password_txt">Esqueceu sua senha ?</string>
 </resources>

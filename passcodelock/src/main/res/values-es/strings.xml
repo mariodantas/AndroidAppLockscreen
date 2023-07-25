@@ -11,5 +11,5 @@
     <string name="password_disabled_txt">Contraseña deshabilitada</string>
     <string name="enter_your_password_txt">Ingresa tu contraseña</string>
     <string name="clear_txt">Borrar</string>
-    <string name="forgot_password_txt">Has olvidado tu contraseña \?</string>
+    <string name="forgot_password_txt">Has olvidado tu contraseña ?</string>
 </resources>

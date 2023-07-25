@@ -11,5 +11,5 @@
     <string name="password_disabled_txt">Пароль отключен</string>
     <string name="enter_your_password_txt">Введите ваш пароль</string>
     <string name="clear_txt">Удалить</string>
-    <string name="forgot_password_txt">Забыли пароль \?</string>
+    <string name="forgot_password_txt">Забыли пароль ?</string>
 </resources>
